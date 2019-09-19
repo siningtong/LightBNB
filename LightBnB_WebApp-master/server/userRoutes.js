@@ -36,6 +36,7 @@ module.exports = function(router, database) {
 
   router.post('/login', (req, res) => {
     const {email, password} = req.body;
+    console.log(email,password)
     login(email, password)
       .then(user => {
         if (!user) {
